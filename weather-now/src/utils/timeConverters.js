@@ -13,10 +13,11 @@ export function convertToAmPm (dateTimeString) {
     return `${hours}:${minutes} ${ampm}`;
   };
 
- export function removeLeadingZero(timeString) {
-    if (timeString.startsWith('0')) {
+  export function removeLeadingZero(timeString) {
+    if (timeString && timeString.startsWith('0')) {
       return timeString.slice(1);
     }
     return timeString;
   }
+  
   

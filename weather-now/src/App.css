@@ -35,7 +35,7 @@
 #weather {
   display: flex;
   flex-direction: column;
-  width: 12rem;
+  width: 23rem;
   padding: 3rem;
   text-align: center;
   background-image: url("https://i.ibb.co/6vRJpw4/glass-panel2.png");
