@@ -20,16 +20,15 @@ function App() {
         <div id='empty'>
 
         </div>
-        <div id='time-form'>
-          <LocalTime time={timeData.location.localtime} />
-          <Form id="form1"/>
-        </div>
       <Routes>
           <Route path="/" element={
             <>
+            <div>
+              <LocalTime time={timeData.location.localtime} />
+              <Form id="form1"/>
+            </div>
             <LocalWeather />
             <MoonPhaseButton />
-            <Form/>
             </>
            } />
           <Route path="/LocalSunrise" element={

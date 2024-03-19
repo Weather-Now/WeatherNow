@@ -8,7 +8,7 @@ const LocalTime = ({ time }) => {
 
   console.log(convertToAmPm(localTime))
   return (
-    <main>
+    <main id='time-form'>
       <p>{convertToAmPm(localTime)}</p>
     </main>
   );
