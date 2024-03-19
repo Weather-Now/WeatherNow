@@ -1,6 +1,7 @@
 import React from 'react'; 
 import sunriseData from '../sunrise.json';
-import { removeLeadingZero } from '../utils/timeConverters';
+import { convertToAmPm, removeLeadingZero } from '/src/utils/timeConverters.js';
+
 
 function LocalSunrise() {
   return (

@@ -11,15 +11,22 @@ import timeData from './time.json';
 function App() {
   return (
 
-    <main>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LocalWeather />} />
-          <Route path="/LocalSunrise" element={<LocalSunrise />} />
-        </Routes>
-      </Router>
-      <Form/>
-      <LocalTime time={timeData.location.localtime} />
+    <main id='main-container'>
+        <div id='empty'>
+
+        </div>
+        <div id='time-form'>
+          <LocalTime time={timeData.location.localtime} />
+          <Form id="form1"/>
+        </div>
+        <div>
+          <Router>
+            <Routes>
+              <Route path="/" element={<LocalWeather />} />
+              <Route path="/LocalSunrise" element={<LocalSunrise />} />
+            </Routes>
+          </Router>
+        </div>
     </main>
   );
 }

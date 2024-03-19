@@ -1,42 +1,118 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+@import url(https://db.onlinewebfonts.com/c/379f355d2cc596f2c28da7b457ce25f6?family=Almoni+ML+v5+AAA+Light);
+
+@font-face {
+  font-family: "Almoni ML v5 AAA Light";
+  src: url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.eot");
+  src: url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/379f355d2cc596f2c28da7b457ce25f6.svg#Almoni ML v5 AAA Light")
+      format("svg");
+}
+
+#main-container {
+  margin-top: 15vh;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  font-family: "Almoni ML v5 AAA Light";
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+
+#weather-icon {
+  width: 2rem;
+  margin: auto;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  padding: 3rem;
+  text-align: center;
+  background-image: url("https://i.ibb.co/6vRJpw4/glass-panel2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#empty{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+}
+
+#time-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
   padding: 2rem;
   text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-family: "Almoni ML v5 AAA Light";
+  font-size: 3rem;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#form1 {
+  font-family: "Almoni ML v5 AAA Light";
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#form1::placeholder {
+  font-family: "Almoni ML v5 AAA Light";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#temp {
+  font-size: 6rem;
+  margin: 0;
 }
 
-.card {
-  padding: 2em;
+#toggle-cont{
+  width: 5rem;
+  margin: auto;
 }
 
-.read-the-docs {
-  color: #888;
+.toggle-button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  background-color: #f38600;
+  color: white;
+  font-weight: 400;
+  font-size: 10px;
+  margin: 6px;
+}
+
+#submit-button {
+  background-color: #f38600;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2%;
+  font-size: 1rem;
+  margin: 0%;
+}
+
+#sunrise-button{
+  margin: rem;
+  background-color: #ffffff;
+  color: #f38600;
+  text-align: center;
+  padding: 2%;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin: 5%;
 }

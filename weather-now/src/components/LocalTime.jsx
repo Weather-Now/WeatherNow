@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import convertToAmPm from '../utils/timeConverters';
+import { convertToAmPm, removeLeadingZero } from '/src/utils/timeConverters.js';
+
 
 const LocalTime = ({ time }) => {
   const [localTime, setLocalTime] = useState(time);
@@ -8,7 +9,7 @@ const LocalTime = ({ time }) => {
   console.log(convertToAmPm(localTime))
   return (
     <main>
-      <p>Local Time: {convertToAmPm(localTime)}</p>
+      <p>{convertToAmPm(localTime)}</p>
     </main>
   );
 };
