@@ -6,11 +6,16 @@ import LocalSunrise from './components/LocalSunrise';
 import Form from './components/Form'
 import LocalTime from './components/LocalTime';
 import timeData from './time.json';
+import MoonPhaseButton from './components/MoonPhaseButton';
+import MoonPhaseFactPage from './components/MoonPhaseFactPage';
+
 
 
 function App() {
   return (
 
+  <Router>
+  
     <main id='main-container'>
         <div id='empty'>
 
@@ -19,15 +24,24 @@ function App() {
           <LocalTime time={timeData.location.localtime} />
           <Form id="form1"/>
         </div>
-        <div>
-          <Router>
-            <Routes>
-              <Route path="/" element={<LocalWeather />} />
-              <Route path="/LocalSunrise" element={<LocalSunrise />} />
-            </Routes>
-          </Router>
-        </div>
+      <Routes>
+          <Route path="/" element={
+            <>
+            <LocalWeather />
+            <MoonPhaseButton />
+            <Form/>
+            </>
+           } />
+          <Route path="/LocalSunrise" element={
+            <>
+            <LocalSunrise />
+            <Form/>
+            </>
+          } />
+          <Route path='/MoonPhaseFactPage' element={<MoonPhaseFactPage/>} />
+        </Routes>
     </main>
+  </Router>
   );
 }
 
