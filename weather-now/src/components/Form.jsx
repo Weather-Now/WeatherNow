@@ -22,7 +22,7 @@ return (
       onChange={handleChange}
       placeholder="Enter City"
       />
-      <button type="submit">Submit</button>
+      <button id="submit-button" type="submit">Search</button>
    </form>
   </div>
   )

@@ -11,19 +11,21 @@ export default function LocalWeather() {
   const { temp_c, temp_f, condition } = weatherData.current;
 
   return (
-    <main>
-      <div>
-        <h2>{isFahrenheit ? `${temp_f}° F` : `${temp_c}° C`}</h2>
+    <main id="weather">
+        <img src={`https:${condition.icon}`} alt="Weather Icon" id="weather-icon" />
 
-        <button onClick={toggleTempUnit}>C</button>
-        <button onClick={toggleTempUnit}>F</button>
 
-        <p>{condition.text}</p>
+        <p id="weather-condition">{condition.text}</p>
 
-        <img src={`https:${condition.icon}`} alt="Weather Icon" />
+        <h2 id='temp'>{isFahrenheit ? `${temp_f}°` : `${temp_c}°`}</h2>
 
-        <Link to="/LocalSunrise">View sunset/sunrise</Link>
-      </div>
+        <div id='toggle-cont'>
+          <button className='toggle-button' onClick={toggleTempUnit}>C</button>
+          <button className='toggle-button' onClick={toggleTempUnit}>F</button>
+        </div>
+
+
+        <Link id="sunrise-button" to="/LocalSunrise">Sunset/Sunrise</Link>
     </main>
   );
 }
