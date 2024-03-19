@@ -1,15 +1,35 @@
-import React, { useState } from 'react';
-import { convertToAmPm, removeLeadingZero } from '/src/utils/timeConverters.js';
+import React, { useState, useEffect } from 'react';
+import { convertToAmPm } from '/src/utils/timeConverters.js';
+import fetchData from '../utils/fetchData';
+import API_KEY from '../config';
 
+const LocalTime = ({ city }) => {
+  const [localTime, setLocalTime] = useState(null); // Initialize to null
 
-const LocalTime = ({ time }) => {
-  const [localTime, setLocalTime] = useState(time);
+  useEffect(() => {
+    const fetchTimeData = async () => {
+      const [data, error] = await fetchData(`https://weatherapi-com.p.rapidapi.com/timezone.json?q=${city}`, {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-key': API_KEY,
+          'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com'
+        }
+      });
 
+      if (!error && data.location && data.location.localtime) {
+        setLocalTime(data.location.localtime); // Set to the specific property
+      }
+    };
 
-  console.log(convertToAmPm(localTime))
+    fetchTimeData();
+  }, [city]);
+
+  // Conditionally render or process localTime
+  const timeString = localTime ? convertToAmPm(localTime) : "Loading...";
+
   return (
     <main id='time-form'>
-      <p>{convertToAmPm(localTime)}</p>
+      <p>{timeString}</p>
     </main>
   );
 };
