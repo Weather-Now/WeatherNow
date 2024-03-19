@@ -119,4 +119,7 @@
 
 #moon-button{
   width: 2rem;
+  position: absolute;
+  bottom: 86%;
+  left: 94%;
 }
