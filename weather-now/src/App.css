@@ -109,7 +109,6 @@
 }
 
 #sunrise-button{
-  margin: rem;
   background-color: #ffffff;
   color: #f38600;
   text-align: center;
@@ -117,6 +116,8 @@
   font-size: 1rem;
   border-radius: 10px;
   margin: 5%;
+  align-self: center;
+  width: 10rem;
 }
 
 #moon-button{
