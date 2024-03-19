@@ -23,13 +23,20 @@ function App() {
     <Routes>
       <Route path="/" element={
         <>
+        <div>
           <LocalTime city={city} /> {/* Assuming LocalTime uses the city prop */}
           <Form onCitySearch={handleCitySearch} />
+        </div>
           <LocalWeather city={city} />
           <MoonPhaseButton />
         </>
       } />
-      <Route path="/LocalSunrise" element={<LocalSunrise city={city} />} />
+      <Route path="/LocalSunrise" element={
+      <>
+      <LocalSunrise city={city} />
+      <Form onCitySearch={handleCitySearch}/>
+      </>
+      } />
       <Route path='/MoonPhaseFactPage' element={<MoonPhaseFactPage />} />
     </Routes>
   </main>
