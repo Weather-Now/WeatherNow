@@ -37,7 +37,7 @@ function App() {
       <Form onCitySearch={handleCitySearch}/>
       </>
       } />
-      <Route path='/MoonPhaseFactPage' element={<MoonPhaseFactPage />} />
+      <Route path='/MoonPhaseFactPage' element={<MoonPhaseFactPage city = {city}/>} />
     </Routes>
   </main>
 </Router>
