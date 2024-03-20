@@ -15,11 +15,17 @@
       format("svg");
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}   
+
 
 #main-container {
   margin-top: 15vh;
   width: 100vw;
-  height: auto;
+  overflow: hidden;
+  height: 100%;
   display: flex;
   font-family: "Almoni ML v5 AAA Light";
   color: aliceblue;
@@ -70,6 +76,29 @@
 
 #form1 {
   font-family: "Almoni ML v5 AAA Light";
+  display: flex;
+  border-radius: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-city {
+  border-radius: 10px;
+  border: 1px;
+  height: 2rem;
+  width: 10rem;
+  padding: 2%;
+}
+
+#submit-button {
+  background-color: #f38600;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2%;
+  font-size: 1rem;
+  margin: 2%;
+  width: 5rem;
 }
 
 #form1::placeholder {
@@ -99,14 +128,6 @@
   margin: 6px;
 }
 
-#submit-button {
-  background-color: #f38600;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 2%;
-  font-size: 1rem;
-  margin: 0%;
-}
 
 #sunrise-button{
   background-color: #ffffff;
@@ -132,6 +153,27 @@
 #moon-button:hover{
   width: 2.3rem;
   transition: ease-in-out;
+}
+
+.sun-data{
+  font-family: "Almoni ML v5 AAA Light";
+  font-size: 1.6rem;
+}
+
+.back-button{
+  background-color: #f38600;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2%;
+  font-size: 1rem;
+  margin: 2%;
+  width: 6rem;
+  border-radius: 7px;
+}
+
+.back-button:hover, #submit-button:hover{
+  color: #f38600;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -182,3 +224,80 @@
   transform: scale(0.9);
 }
 }
+
+
+@media only screen and (max-width: 600px) {
+  #main-container {
+    margin-top: 15vh;
+    width: 100vw;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Almoni ML v5 AAA Light";
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    transition: width 2s, height 2s, transform 2s;
+  }
+
+  #time-form {
+    height: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 12rem;
+    padding: 1rem;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-family: "Almoni ML v5 AAA Light";
+    font-size: 3rem;
+    color: white;
+  }
+
+  #empty{
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 0rem;
+
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}   
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  padding: 1.6rem;
+  text-align: center;
+  background-image: url("https://i.ibb.co/6vRJpw4/glass-panel2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#moon-button{
+  width: 2rem;
+  position: absolute;
+  bottom: 90%;
+  left: 80%;
+  -webkit-animation: breathing 3s ease-out infinite normal;
+  animation: breathing 3s ease-out infinite normal;
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+
+
+}
+

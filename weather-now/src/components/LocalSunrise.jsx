@@ -37,9 +37,9 @@ function LocalSunrise({ city }) {
 
   return (
     <div>
-      <p>{`Sunrise: ${sunrise}`}</p>
-      <p>{`Sunset: ${sunset}`}</p>
-      <Link to="/">Go Back</Link>
+      <p className="sun-data">{`Sunrise: ${sunrise}`}</p>
+      <p className="sun-data">{`Sunset: ${sunset}`}</p>
+      <Link className="back-button" to="/">Back</Link>
     </div>
   );
 }
