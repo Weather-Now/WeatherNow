@@ -3,6 +3,9 @@ import { convertToAmPm } from '/src/utils/timeConverters.js';
 import fetchData from '../utils/fetchData';
 import API_KEY from '../config';
 
+
+let currentLocation = '';
+
 const LocalTime = ({ city }) => {
   const [localTime, setLocalTime] = useState(null); // Initialize to null
 
@@ -16,6 +19,9 @@ const LocalTime = ({ city }) => {
         }
       });
 
+      console.log(data.location.name)
+      currentLocation = data.location.name
+
       if (!error && data.location && data.location.localtime) {
         setLocalTime(data.location.localtime); // Set to the specific property
       }
@@ -27,10 +33,12 @@ const LocalTime = ({ city }) => {
   // Conditionally render or process localTime
   const timeString = localTime ? convertToAmPm(localTime) : "Loading...";
 
+
+
   return (
     <main id='time-form'>
+      <h1 id='current-location'>{currentLocation}</h1>
       <p>{timeString}</p>
-      <p id="location">Brooklyn</p>
     </main>
   );
 };
