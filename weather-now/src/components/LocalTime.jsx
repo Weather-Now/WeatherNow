@@ -30,6 +30,7 @@ const LocalTime = ({ city }) => {
   return (
     <main id='time-form'>
       <p>{timeString}</p>
+      <p id="location">Brooklyn</p>
     </main>
   );
 };
