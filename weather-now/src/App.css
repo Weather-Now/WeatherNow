@@ -176,6 +176,10 @@ html {
   background-color: rgb(255, 255, 255);
 }
 
+#current-location{
+  font-size: 1rem;
+}
+
 
 @-webkit-keyframes breathing {
 0% {
@@ -295,9 +299,50 @@ html {
 
 }
 
-@media only screen and (min-width: 600px) {
-
-
-
+#darkmode{
+  width: 2rem;
+  position: absolute;
+  bottom: 87%;
+  right: 95%;
+  -webkit-animation: breathing 3s ease-out infinite normal;
+  animation: breathing 3s ease-out infinite normal;
 }
 
+
+.back-button, #sunrise-button, #submit-button {
+  transition: background-color 0.5s ease;
+}
+
+[data-theme='light'] #sunrise-button{
+  background-color: var(--button-bg-light);
+}
+
+[data-theme='dark'] .back-button,
+[data-theme='dark'] #sunrise-button,
+[data-theme='dark'] #submit-button {
+  background-color: var(--button-bg-dark);
+}
+
+
+#moon-photo{
+  width: 4rem;
+  height: 4rem;
+}
+
+#moon-info-container{
+  display: flex;
+  padding: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+#moon-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#fact{
+  font-size: 2rem;
+}

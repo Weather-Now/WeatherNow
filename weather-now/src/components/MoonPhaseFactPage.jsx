@@ -26,20 +26,20 @@ const MoonPhaseFactPage = ({city}) => {
   }, [city])
 
   return (
-  <div>
-    <h1>{moonData?.phase}</h1>
+  <main id='moon-info-container'>
     {moonData && (
-      <div>
-        <img src={moonData.image_url} alt={moonData.phase} />
-        <p>{moonData.fact}</p>
+      <div id='moon-container'>
+        <h1>{moonData?.phase}</h1>
+        <img id='moon-photo' src={moonData.image_url} alt={moonData.phase} />
+        <div>
+          <p id='fact'>{moonData.fact}</p>
+        </div>
       </div>
     )}
     <div>
-      <h1>Moon</h1>
-      <p>Fact</p>
       <Link className='back-button' to="/">Back</Link>
     </div>
-  </div>
+  </main>
   );
 };
 export default MoonPhaseFactPage;

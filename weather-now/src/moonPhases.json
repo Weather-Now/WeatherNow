@@ -1,42 +1,43 @@
-{ "moon_phases": [
+{
+  "moon_phases": [
     {
       "phase": "New Moon",
-      "image_url": "https://static1.squarespace.com/static/54fa3604e4b0bf71d2266f9d/54fa3af3e4b0b89d00650a1e/5760746b01dbaec634f0363a/1465939096392/New+Moon+Solo.png?format=1500w",
+      "image_url": "https://i.ibb.co/WKprMWG/New-Moon.png",
       "fact": "During a new moon, the moon is positioned between the Earth and the Sun, with its dark side facing Earth."
     },
     {
       "phase": "Waxing Crescent",
-      "image_url": "https://www.clker.com/cliparts/v/7/H/g/h/X/crescent-moon-hi.png",
+      "image_url": "https://i.ibb.co/syxzR0C/Waxing-cresent.png",
       "fact": "During a waxing crescent phase, the moon appears as a crescent shape and is visible in the western sky after sunset."
     },
     {
       "phase": "First Quarter",
-      "image_url": "https://lh3.googleusercontent.com/proxy/1utA4tfeutghAlum27CwDEV-X-PCTC6dT8XVNQ5-aWxe-9xqfYNK1nePJHEogzgImvYOQiW2_LPQW83ZcYpwVfxgrfuEh7yhecDH5YKhS2LHHTYxkIXx9vQkYPM",
+      "image_url": "https://i.ibb.co/58FZkPW/First-Quater.png",
       "fact": "The first quarter moon is often called a half-moon, as half of its surface is illuminated and visible from Earth."
     },
     {
       "phase": "Waxing Gibbous",
-      "image_url": "https://phasesmoon.com/images/phases/500/waxing-gibbous.png",
+      "image_url": "https://i.ibb.co/qx7kyNQ/waxing-gibous.png",
       "fact": "In a waxing gibbous phase, the moon is more than half illuminated but less than full, appearing as a bulging disc."
     },
     {
       "phase": "Full Moon",
-      "image_url": "https://static.vecteezy.com/system/resources/previews/023/655/353/original/full-moon-transparent-png.png",
+      "image_url": "https://i.ibb.co/1TrW6Hs/Full-Moon.png",
       "fact": "During a full moon, the entire face of the moon that is visible from Earth is illuminated by sunlight."
     },
     {
       "phase": "Waning Gibbous",
-      "image_url": "https://64.media.tumblr.com/cee512485e23e2ad176f09806e423f0c/718449f297ab294a-58/s1280x1920/c3bc23ae6e318c7a33d2ed90f8b27ce993c75f31.png",
+      "image_url": "https://i.ibb.co/hDWSh0G/Wanning-Gibous.png",
       "fact": "In a waning gibbous phase, the moon is still more than half illuminated, but the illuminated portion is decreasing."
     },
     {
       "phase": "Last Quarter",
-      "image_url": "https://lh3.googleusercontent.com/proxy/TaGYipxyyhdz9sjk0_KFTU7G2B6ohbPugCxgXhYIK4lpUU_pN41HeVfuGCtMCfjf4abtGwXOyvRA7YBPmEa71JqcmYk8wy8i4kiqhqtoL6BCDYZAfAZKO5JDoxI",
+      "image_url": "https://i.ibb.co/WnKcvbM/Third-Qutaer.png",
       "fact": "The last quarter moon appears as a half-moon shape, with the left half illuminated. It rises around midnight and sets around noon."
     },
     {
       "phase": "Waning Crescent",
-      "image_url": "https://clipart-library.com/images_k/crescent-moon-png-transparent/crescent-moon-png-transparent-18.png",
+      "image_url": "https://i.ibb.co/BTtJcfg/waning-cresent.png",
       "fact": "During a waning crescent phase, only a small crescent of the moon is visible, and it is seen in the eastern sky before sunrise."
     }
   ]
