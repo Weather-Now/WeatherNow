@@ -11,12 +11,13 @@ const Form = ({ onCitySearch }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onCitySearch(formData.city); 
+    setFormData({city: ''})
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
+      <form id="form1" onSubmit={handleSubmit}>
+        <input id="input-city"
           type="text"
           name="city"
           value={formData.city}

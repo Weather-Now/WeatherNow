@@ -5,7 +5,7 @@ const MoonPhaseFactPage = () => {
     <div>
       <h1>Moon</h1>
       <p>Fact</p>
-      <Link to="/">Go Back</Link>
+      <Link className='back-button' to="/">Back</Link>
     </div>
   )
 }
