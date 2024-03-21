@@ -23,8 +23,9 @@ const Form = ({ onCitySearch }) => {
           value={formData.city}
           onChange={handleChange}
           placeholder="Enter City"
+          aria-label="Enter your city for location-based services"
         />
-        <button id="submit-button" type="submit">Search</button>
+        <button aria-label="Search for weather in your city" id="submit-button" type="submit">Search</button>
       </form>
     </div>
   );

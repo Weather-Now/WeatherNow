@@ -37,9 +37,9 @@ function LocalSunrise({ city }) {
 
   return (
     <div>
-      <p className="sun-data">{`Sunrise: ${sunrise}`}</p>
-      <p className="sun-data">{`Sunset: ${sunset}`}</p>
-      <Link className="back-button" to="/">Back</Link>
+      <p aria-label="Sunrise time" className="sun-data">{`Sunrise: ${sunrise}`}</p>
+      <p aria-label="Sunset time" className="sun-data">{`Sunset: ${sunset}`}</p>
+      <Link aria-label="Return home page" className="back-button" to="/">Back</Link>
     </div>
   );
 }

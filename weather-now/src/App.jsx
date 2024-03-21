@@ -33,7 +33,7 @@ function App() {
       <Route path="/" element={
         <>
         <div>
-        <button onClick={toggleTheme} style={{ border: 'none', background: 'none' }}>
+        <button aria-label="Switch to dark/light mode" onClick={toggleTheme} style={{ border: 'none', background: 'none' }}>
   <img id="darkmode" src="https://i.ibb.co/HCc4ddH/dark-theme-icon-512x512-185rlszm.png" alt="Toggle theme" style={{ width: '32px', height: '32px' }} />
 </button>
 
