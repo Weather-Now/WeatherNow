@@ -4,6 +4,8 @@ import API_KEY from "../config";
 import { removeLeadingZero } from "/src/utils/timeConverters.js";
 import { Link } from "react-router-dom";
 
+let currentLocation = '';
+
 function LocalSunrise({ city }) {
   const [sunriseData, setSunriseData] = useState(null);
 
@@ -19,6 +21,9 @@ function LocalSunrise({ city }) {
         };
 
         const [data, error] = await fetchData(url, options);
+
+        currentLocation = data.location.name
+
         if (error) {
           console.error("Failed to fetch data:", error);
         } else {
@@ -26,6 +31,7 @@ function LocalSunrise({ city }) {
         }
       }
     };
+    
 
     fetchDataAsync();
   }, [city]);
@@ -36,11 +42,12 @@ function LocalSunrise({ city }) {
   const sunset = removeLeadingZero(sunriseData?.astronomy?.astro?.sunset);
 
   return (
-    <div>
+    <main>
+      <h1>{currentLocation}</h1>
       <p className="sun-data">{`Sunrise: ${sunrise}`}</p>
       <p className="sun-data">{`Sunset: ${sunset}`}</p>
       <Link className="back-button" to="/">Back</Link>
-    </div>
+    </main>
   );
 }
 
