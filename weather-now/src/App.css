@@ -22,7 +22,7 @@ html {
 
 
 #main-container {
-  margin-top: 15vh;
+  margin-top: 12.3vh;
   width: 100vw;
   overflow: hidden;
   height: 100%;
@@ -31,13 +31,14 @@ html {
   color: aliceblue;
   align-items: center;
   justify-content: center;
-  gap: 10vw;
+  gap: 11vw;
   transition: width 2s, height 2s, transform 2s;
 }
 
 #weather-icon {
-  width: 2rem;
+  width: 3.5rem;
   margin: auto;
+  margin-bottom: -6%;
 }
 
 #weather {
@@ -52,10 +53,14 @@ html {
   background-size: contain;
 }
 
+#weather-condition{
+  font-size: 2rem;
+}
+
 #empty{
     display: flex;
     flex-direction: column;
-    width: 10rem;
+    width: 16rem;
 }
 
 #time-form {
@@ -64,7 +69,7 @@ html {
   align-items: center;
   justify-content: center;
   width: 12rem;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,6 +77,7 @@ html {
   font-family: "Almoni ML v5 AAA Light";
   font-size: 3rem;
   color: white;
+  height: 10rem;
 }
 
 #form1 {
@@ -124,7 +130,7 @@ html {
   background-color: #f38600;
   color: white;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 0.6rem;
   margin: 6px;
 }
 
@@ -142,17 +148,19 @@ html {
 }
 
 #moon-button{
-  width: 2rem;
+  width: 4rem;
   position: absolute;
   bottom: 86%;
-  left: 94%;
+  left: 90%;
+  right: 0;
   -webkit-animation: breathing 3s ease-out infinite normal;
   animation: breathing 3s ease-out infinite normal;
+  transition: top ease 0.5s;
 }
 
 #moon-button:hover{
-  width: 2.3rem;
-  transition: ease-in-out;
+  width: 4.3rem;
+  transition: top ease 0.5s;
 }
 
 .sun-data{
@@ -164,11 +172,12 @@ html {
   background-color: #f38600;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 2%;
-  font-size: 1rem;
-  margin: 2%;
-  width: 6rem;
-  border-radius: 7px;
+  padding: 4%;
+  font-size: 1.5rem;
+  margin: 4%;
+  width: 8rem;
+  height: auto;
+  border-radius: 10px;
 }
 
 .back-button:hover, #submit-button:hover{
@@ -183,18 +192,18 @@ html {
 
 @-webkit-keyframes breathing {
 0% {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(2);
+  transform: scale(2);
 }
 
 25% {
-  -webkit-transform: scale(2.5);
-  transform: scale(2.5);
+  -webkit-transform: scale(10);
+  transform: scale(10);
 }
 
 60% {
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(5);
+  transform: scale(5);
 }
 
 100% {
@@ -291,7 +300,7 @@ html {
 #moon-button{
   width: 2rem;
   position: absolute;
-  bottom: 90%;
+  bottom: 96%;
   left: 80%;
   -webkit-animation: breathing 3s ease-out infinite normal;
   animation: breathing 3s ease-out infinite normal;
@@ -302,7 +311,7 @@ html {
 #darkmode{
   width: 2rem;
   position: absolute;
-  bottom: 87%;
+  bottom: 90%;
   right: 95%;
   -webkit-animation: breathing 3s ease-out infinite normal;
   animation: breathing 3s ease-out infinite normal;
@@ -325,13 +334,13 @@ html {
 
 
 #moon-photo{
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 #moon-info-container{
   display: flex;
-  padding: 10%;
+  padding: 1%;
   align-items: center;
   justify-content: center;
 }
@@ -345,4 +354,25 @@ html {
 
 #fact{
   font-size: 2rem;
+  width: 30rem;
+}
+
+#current-location{
+  font-size: 2.1rem;
+  margin-bottom: -35%;
+  font-weight: bold;
+  text-shadow: 1px 0px 0px currentColor, 0 1px 0px currentColor, -1px 0px 0px currentColor, 0 -1px 0px currentColor;
+}
+
+#current-time{
+  font-size: 3.2rem;
+  margin-bottom: -2%;
+}
+
+#loc-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0%
 }

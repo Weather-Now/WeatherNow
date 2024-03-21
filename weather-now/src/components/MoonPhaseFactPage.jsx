@@ -30,14 +30,14 @@ const MoonPhaseFactPage = ({city}) => {
     {moonData && (
       <div id='moon-container'>
         <h1>{moonData?.phase}</h1>
-        <img id='moon-photo' src={moonData.image_url} alt={moonData.phase} />
+        <img aria-label='Photo depicting current moon phase' id='moon-photo' src={moonData.image_url} alt={moonData.phase} />
         <div>
-          <p id='fact'>{moonData.fact}</p>
+          <p aria-label='Information about current moon phase' id='fact'>{moonData.fact}</p>
         </div>
       </div>
     )}
     <div>
-      <Link className='back-button' to="/">Back</Link>
+      <Link aria-label='Return to home page' className='back-button' to="/">Back</Link>
     </div>
   </main>
   );
