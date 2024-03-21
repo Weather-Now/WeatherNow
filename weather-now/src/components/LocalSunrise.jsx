@@ -42,12 +42,14 @@ function LocalSunrise({ city }) {
   const sunset = removeLeadingZero(sunriseData?.astronomy?.astro?.sunset);
 
   return (
+
     <main>
       <h1>{currentLocation}</h1>
-      <p className="sun-data">{`Sunrise: ${sunrise}`}</p>
-      <p className="sun-data">{`Sunset: ${sunset}`}</p>
+      <p aria-label="Sunrise time" className="sun-data">{`Sunrise: ${sunrise}`}</p>
+      <p aria-label="Sunset time" className="sun-data">{`Sunset: ${sunset}`}</p>
       <Link className="back-button" to="/">Back</Link>
     </main>
+
   );
 }
 

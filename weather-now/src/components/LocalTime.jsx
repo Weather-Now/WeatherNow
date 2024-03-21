@@ -36,9 +36,11 @@ const LocalTime = ({ city }) => {
 
 
   return (
-    <main id='time-form'>
-      <h1 id='current-location'>{currentLocation}</h1>
-      <p>{timeString}</p>
+    <main  id='time-form'>
+      <div id='loc-cont'>
+        <h1 aria-label='Current location' id='current-location'>{currentLocation}</h1>
+        <p id="current-time" aria-label='Location time'>{timeString}</p>
+      </div>
     </main>
   );
 };
