@@ -7,7 +7,7 @@ import API_KEY from '../config';
 let currentLocation = '';
 
 const LocalTime = ({ city }) => {
-  const [localTime, setLocalTime] = useState(null); // Initialize to null
+  const [localTime, setLocalTime] = useState(null); 
 
   useEffect(() => {
     const fetchTimeData = async () => {
@@ -23,14 +23,14 @@ const LocalTime = ({ city }) => {
       currentLocation = data.location.name
 
       if (!error && data.location && data.location.localtime) {
-        setLocalTime(data.location.localtime); // Set to the specific property
+        setLocalTime(data.location.localtime); 
       }
     };
 
     fetchTimeData();
   }, [city]);
 
-  // Conditionally render or process localTime
+
   const timeString = localTime ? convertToAmPm(localTime) : "Loading...";
 
 

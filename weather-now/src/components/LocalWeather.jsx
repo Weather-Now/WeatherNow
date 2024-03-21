@@ -30,15 +30,15 @@ export default function LocalWeather({ city }) {
   const { temp_c, temp_f, condition } = weatherData.current;
 
   return (
-    <main id="weather">
+    <main id="weather" aria-label='local-weather'>
         <img src={`https:${condition.icon}`} alt="Weather Icon" id="weather-icon" />
         <p id="weather-condition">{condition.text}</p>
         <h2 id='temp'>{isFahrenheit ? `${temp_f}°` : `${temp_c}°`}</h2>
         <div id='toggle-cont'>
-          <button className='toggle-button' onClick={() => setIsFahrenheit(false)}>C</button>
-          <button className='toggle-button' onClick={() => setIsFahrenheit(true)}>F</button>
+          <button aria-label='celsius button' className='toggle-button' onClick={() => setIsFahrenheit(false)}>C</button>
+          <button aria-label='fahrenheit button' className='toggle-button' onClick={() => setIsFahrenheit(true)}>F</button>
         </div>
-        <Link id="sunrise-button" to="/LocalSunrise">Sunset/Sunrise</Link>
+        <Link aria-label='sunrise and sunset button' id="sunrise-button" to="/LocalSunrise">Sunset/Sunrise</Link>
     </main>
   );
 }

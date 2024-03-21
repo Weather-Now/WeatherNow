@@ -5,7 +5,6 @@ import LocalWeather from "./components/LocalWeather";
 import LocalSunrise from "./components/LocalSunrise";
 import Form from "./components/Form";
 import LocalTime from "./components/LocalTime";
-import timeData from "./time.json";
 import MoonPhaseButton from "./components/MoonPhaseButton";
 import MoonPhaseFactPage from "./components/MoonPhaseFactPage";
 import { useTheme } from "./components/ThemeContext";
@@ -37,7 +36,7 @@ function App() {
   <img id="darkmode" src="https://i.ibb.co/HCc4ddH/dark-theme-icon-512x512-185rlszm.png" alt="Toggle theme" style={{ width: '32px', height: '32px' }} />
 </button>
 
-          <LocalTime city={city} /> {/* Assuming LocalTime uses the city prop */}
+          <LocalTime city={city} /> 
           <Form onCitySearch={handleCitySearch} />
         </div>
           <LocalWeather city={city} />
