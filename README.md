@@ -10,3 +10,9 @@ The core features of the application include:
 - Accessing sunrise and sunset information for the user-specified location.
 - Viewing the local time based on the user-submitted location.
 - Viewing the current moon phase with relevant information.
+
+
+
+![Image 1](https://i.imgur.com/dlSwiv7.png)
+![Image 2](https://i.imgur.com/lB1KD1R.jpeg)
+
